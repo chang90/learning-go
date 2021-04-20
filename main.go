@@ -15,6 +15,14 @@ type User struct {
 	BirthDate   time.Time
 }
 
+type myStruct struct {
+	FirstName string
+}
+
+func (m *myStruct) printFirstName() string {
+	return m.FirstName
+}
+
 func main() {
 	var whatToSay string
 
@@ -35,6 +43,12 @@ func main() {
 	}
 
 	log.Println(user.FirstName, user.LastName)
+
+	myVar := myStruct{
+		FirstName: "Mary",
+	}
+	log.Println("myVar is set to", myVar.FirstName)
+	log.Println("print first name func", myVar.printFirstName())
 
 }
 
