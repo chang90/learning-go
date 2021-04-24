@@ -19,10 +19,6 @@ type myStruct struct {
 	FirstName string
 }
 
-func (m *myStruct) printFirstName() string {
-	return m.FirstName
-}
-
 func main() {
 	var whatToSay string
 
@@ -50,6 +46,10 @@ func main() {
 	log.Println("myVar is set to", myVar.FirstName)
 	log.Println("print first name func", myVar.printFirstName())
 
+}
+
+func (m *myStruct) printFirstName() string {
+	return m.FirstName
 }
 
 func saySomething(say string) (string, string) {
