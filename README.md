@@ -6,3 +6,4 @@ This is a collection of some simple function running in go.
  - How to set variable
  - How to create function
  - How to create struct
+ - How to use pointer
